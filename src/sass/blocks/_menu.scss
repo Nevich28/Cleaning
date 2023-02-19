@@ -6,12 +6,8 @@
         grid-template-columns: 162px 555px 185px;
         gap: 100px;
         align-items: center;
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
     }
     &__items {
-        //margin-left: 20px;
         margin-bottom: 0;
         list-style-type: none;
         width: 555px;
@@ -19,11 +15,13 @@
         justify-content: space-between;
         align-items: center;
         a {
-            text-decoration: none;
             font-family: Raleway;
             font-size: 18px;
             font-weight: 600;
             color: $mainBlue;
+            &:hover {
+               text-decoration: none;
+            }
         }
     }
 }

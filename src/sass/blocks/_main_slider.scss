@@ -1,0 +1,42 @@
+.main_slider {
+
+    &__item {
+        height: 800px;
+
+        padding-top: 250px;
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 27px;
+            font-weight: 600;
+            text-align: center;
+            color: #fff;
+        }
+    }    
+    &__descr {
+        font-family: 'Nunito', sans-serif;
+        font-size: 64px;
+        font-weight: 800;
+        text-align: center;
+        color: #fff;
+    }
+    &__btn {
+        display: block;
+        margin: 40px auto 0 auto;
+    }
+    &-back1 {
+        background: url('../img/slider1/slide1_1.png') center (center / cover) no-repeat;
+    }
+    &-back2 {
+        background: url('../img/slider1/slide1_2.png') center (center / cover) no-repeat;
+    }
+    &-back3 {
+        background: url('../img/slider1/slide1_3.png') center (center / cover) no-repeat;
+    }
+}
+.slick-dots {
+    bottom: 10px;
+    color: #fff;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+}

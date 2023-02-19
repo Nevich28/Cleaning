@@ -23,7 +23,11 @@
         font-size: 16px;
         text-align: left;
         color: #fff;
-        text-decoration: none;
+        //text-decoration: none;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
     }
     &__social {
         width: 140px;
