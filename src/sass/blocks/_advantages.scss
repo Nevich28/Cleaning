@@ -1,15 +1,20 @@
 .advantages {
     height: 350px;
     background-color: $mainBlue;
+    display: flex;
+    align-items: center;
     &__items {
-        list-style-type: none;
-        display: flex;
+         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     &__item {
         width: 180px;
-        margin-top: 100px;
+    }
+    &__divider {
+        width: 3px;
+        height: 150px;
+        background-color: white;
     }
     &__icon {
         display: block;

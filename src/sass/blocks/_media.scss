@@ -45,7 +45,36 @@
         padding-top: 100px;
         margin-top: 60px;
     }
-
+    .advantages {
+        &__item {
+            &:before {
+                left: -38px;
+            }
+        }
+    }
+    .choose {
+        height: 530px;
+        &__img {
+            width: 350px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__title {
+            font-size: 36px;
+        }
+        &__descr {
+            line-height: 1.4; 
+        }
+    }
+    .project {
+        &__img_block {
+            grid-template-columns: repeat(3,300px);
+            grid-template-rows: repeat(1,215px);
+            grid-auto-rows: 215px;
+            gap: 25px;
+        }
+    }
 }
 @media (max-width: 992px) {
     .container {
@@ -159,8 +188,47 @@
     }
     .advantages {
         height: 300px;
-        &__item {
-            margin-top: 75px;
+    }
+    .choose {
+        height: 385px;
+        margin-top: 60px;
+        &__info {
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        &__img {
+           width: 270px;
+        }
+        &__subtitle {
+           font-size: 15px;
+        }
+        &__title {
+           font-size: 26px;
+        }
+        &__descr {
+           line-height: 1.2; 
+            font-size: 17px;
+        }
+        &_btn {
+            width: 220px;
+            height: 65px;
+        }
+        &__btn_block {
+                padding: 10px 28px 10px 15px;
+            }
+        &__btn_icon {
+            margin-right: 11px;
+        }
+        &__btn_descr {
+            font-size: 13px;
+        }
+    }
+    .project {
+        &__img_block {
+            grid-template-columns: repeat(2,345px);
+            grid-template-rows: repeat(1,240px);
+            grid-auto-rows: 240px;
+            gap: 25px;
         }
     }
 }
@@ -178,6 +246,9 @@
         }
         &__social {
             margin-right: 60px;
+        }
+        &__item {
+            margin-top: 3px;
         }
     }
     .menu {
@@ -313,14 +384,40 @@
     }
     .advantages {
         height: 250px;
-        &__item {
-            margin-top: 60px;
-        }
         &__icon {
             width: 45px;
+            height: 45px;
         }
         &__descr {
             font-size: 20px;
+        }
+        &__divider {
+            height: 105px;
+        }
+    }
+    .choose {
+        &__img {
+           width: 200px;
+        }
+        &__subtitle {
+           font-size: 14px;
+        }
+        &__title {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+        &__descr {
+           line-height: 1; 
+            font-size: 15px;
+        }
+        &_btn {
+            position: static;
+        }
+    }
+    .project {
+        &__img_block {
+            grid-template-columns: repeat(1,345px);
+
         }
     }
 }
@@ -416,14 +513,36 @@
             flex-wrap: wrap;
         }
         &__item {
-            width: 150px;
-            margin-top: 20px;
+            width: 160px;
         }
-        &__icon {
-            // width: 45px;
+        &__divider {
+            display: none;
+        }
+    }
+    .choose {
+        margin-top: 20px;
+        &__img {
+           display: none;
         }
         &__descr {
-            // font-size: 20px;
+           line-height: 1.2; 
+            font-size: 16px;
+        }
+        &_btn {
+            margin-top: 10px;
+        }
+        &__info {
+            margin-top: 10px;
+            padding-right: 6px;
+        }
+    }
+    .project {
+        margin-top: 100px;
+        &__img_block {
+            grid-template-columns: repeat(1,300px);
+        }
+        &__tabs {
+            flex-wrap: wrap;
         }
     }
 }

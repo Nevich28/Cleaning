@@ -1,0 +1,62 @@
+.project {
+    &__title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 43px;
+        font-weight: 600;
+        text-align: center;
+        color: #414141;
+    }
+    &__subtitke {
+        margin-top: 25px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.33;
+        text-align: center;
+        color: #777;
+    }
+    &_divider {
+        width: 60px;
+        margin-top: 12px;
+        margin: 12px auto 0 auto;
+    }
+    &__tabs {
+        margin: 35px auto 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__tab {
+        padding: 12px 17px;
+        border-radius: 4px;
+        cursor: pointer;
+        &_descr {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            color: #676767;
+        }
+    }
+    .active_tab {
+        background-color: $mainYellow;
+        transition: 0.5s all;
+    }
+    .active_descr {
+        color: #fff;
+        transition: 0.5s all;
+    }
+    &__img_block {
+        margin: 35px auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(1, 230px);
+        grid-auto-rows: 230px;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
