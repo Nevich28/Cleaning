@@ -25,10 +25,38 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//Slick slider services
+	function addStyle(item) {//добавка стилей
+		item.lastElementChild.classList.add('central_slide');
+		item.lastElementChild.lastElementChild.classList.add('central_slide');
+		item.lastElementChild.firstElementChild.classList.add('central_slide');
+	}
+
+	function removeStyle(item) {//удаление стилей
+		item.lastElementChild.classList.remove('central_slide');
+		item.lastElementChild.lastElementChild.classList.remove('central_slide');
+		item.lastElementChild.firstElementChild.classList.remove('central_slide');
+	}
+	$('.services__slider').on('init reInit afterChange', function(event, slick, currentSlide){ // прослушиваем все события слайдера
+		const activeSlides = document.querySelectorAll('.services__slider .slick-active'),//находим активные слайды на экране
+			page = ((currentSlide || 0)+1); // определяем текущую страницу
+
+		const allSlidesJ = document.querySelectorAll('.services__item'); //все слайды
+		if (activeSlides.length>2) { //отключаем перекраску для мобильной версии
+			allSlidesJ.forEach(item => {//удаляем все стили
+				removeStyle(item);
+			});
+			allSlidesJ.forEach(item => {//ставим стиль нужному
+				if (page == $(item).attr('data-slick-index')) {
+					addStyle(item);
+				}
+			});
+		}
+	});
+
 	$('.services__slider').slick({
 		infinite: true,
 		slidesToShow: 3,
-		centerMode: true,
+		autoplay: false,
 		responsive: [
 			{
 				breakpoint: 1300,
@@ -106,4 +134,43 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+	//слайдер с отзывами
+	$('.slide_descr').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slide_photo'
+	});
+	
+	$('.slide_photo').on('init reInit afterChange', function(event, slick, currentSlide){
+		const page = ((currentSlide || 0)+1),
+			count = slick.slideCount;
+		$('.delivering__count').text(`0${page} / 0${count}`);
+
+		const allSlidesJ = document.querySelectorAll('.delivering__photo_box');
+
+		allSlidesJ.forEach(item => {
+			item.lastElementChild.classList.remove('delivering_yellov_filter');
+			item.classList.remove('delivering_scale_filter');
+		});
+		allSlidesJ.forEach(item => {
+			if (page == $(item).attr('data-slick-index')) {
+				item.lastElementChild.classList.add('delivering_yellov_filter');
+				item.classList.add('delivering_scale_filter');
+			}
+		});
+	});
+
+	$('.slide_photo').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slide_descr',
+		dots: false,
+		focusOnSelect: true,
+		arrows: true,
+		prevArrow: $('.delivering__prev'),
+		nextArrow: $('.delivering__next'),
+	});
+	
 });

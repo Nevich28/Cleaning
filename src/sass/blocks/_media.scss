@@ -75,6 +75,15 @@
             gap: 25px;
         }
     }
+    .delivering {
+        &__next, &__prev {
+            svg {
+                &:hover {
+                    fill: $mainYellow;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 992px) {
     .container {
@@ -174,17 +183,6 @@
         height: 815px;
         padding-top: 60px;
         margin-top: 40px;
-        .slick-current {
-            .services__desr_cont {
-                background-color: #fff;
-            }
-            .services__slider_title {
-                color: #848484;
-            }
-            .services__slider_descr {
-                color: #848484;
-            }
-        }
     }
     .advantages {
         height: 300px;
@@ -229,6 +227,27 @@
             grid-template-rows: repeat(1,240px);
             grid-auto-rows: 240px;
             gap: 25px;
+        }
+    }
+    .delivering {
+        padding: 60px 0 0 0;
+        &__title {
+            font-size: 40px;
+        }
+        &__btn {
+            margin: 30px auto 0 auto;
+        }
+        &__review_block {
+            padding: 60px 180px 0 180px;
+        }
+        &__review_slide {
+            margin-top: 30px;
+        }
+        &__review_descr {
+            font-size: 25px;
+            span {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -415,9 +434,15 @@
         }
     }
     .project {
+        padding-bottom: 80px;
         &__img_block {
             grid-template-columns: repeat(1,345px);
 
+        }
+    }
+    .delivering {
+        &__review_block {
+            padding: 60px 100px 0 100px;
         }
     }
 }
@@ -544,5 +569,16 @@
         &__tabs {
             flex-wrap: wrap;
         }
+    }
+    .delivering {
+         &__review_block {
+            padding: 60px 7px 0 7px;
+         }
+         &__review_descr {
+            font-size: 20px;
+         }
+         &__review_block {
+            height: 470px;
+         }
     }
 }

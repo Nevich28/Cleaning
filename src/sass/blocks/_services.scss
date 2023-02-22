@@ -56,18 +56,12 @@
     .slick-slide {
         padding: 0 15px;
     } 
-    .slick-current {
-        .services__desr_cont {
-            background-color: $mainBlue;
-        }
-        .services__slider_title {
-            color: #fff;
-        }
-        .services__slider_descr {
-            color: #fff;
-        }
+    .central_slide {
+        color: #fff;
+        background-color: $mainBlue;
+        color: #fff;
     }
-    .slick-prev {
+     .slick-prev {
         &::before {
             color: $mainBlue;
             font-size: 45px;
