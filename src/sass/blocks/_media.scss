@@ -84,6 +84,15 @@
             }
         }
     }
+    .blog {
+        &__block {
+            column-gap: 50px;
+            grid-template-columns: 490px 420px;
+        }
+        &__small {
+            grid-template-columns: 180px 205px;
+        }
+    }
 }
 @media (max-width: 992px) {
     .container {
@@ -248,6 +257,17 @@
             span {
                 font-size: 18px;
             }
+        }
+    }
+    .blog {
+        margin-top: 220px;
+        &__block {
+            margin-top: 40px;
+            grid-template-columns: 310px 390px;
+            column-gap: 25px;
+        }
+        &__small {
+            column-gap: 15px;
         }
     }
 }
@@ -445,6 +465,36 @@
             padding: 60px 100px 0 100px;
         }
     }
+    .blog {
+        margin-top: 210px;
+        &__subtitle {
+            margin-top: 10px;
+        }
+        &__block {
+            margin-top: 25px;
+            grid-template-columns: 500px;
+            grid-template-rows: 500px 240px 240px;
+            row-gap: 60px;
+        }
+        &__big {
+            grid-row: 1/2;
+            &_title {
+                margin-top: 15px;
+            }
+            &_descr {
+                margin-top: 13px;
+                margin-bottom: 5px;
+            }
+        }
+        &__social_block {
+            margin-top: 7px;
+        }
+        &__small {
+            &:after {
+                bottom: -30px;   
+            }
+        }
+    }
 }
 @media (max-width: 576px) {
     .container {
@@ -580,5 +630,36 @@
          &__review_block {
             height: 470px;
          }
+    }
+    .blog {
+        margin-top: 250px;
+        &__title {
+            font-size: 33px;
+        }
+        &__subtitle {
+            font-size: 17px;
+        }
+        &__block {
+            grid-template-columns: 300px;
+            grid-template-rows: 455px 295px 295px;
+            row-gap: 20px;
+            justify-content: center;
+        }
+        &__small {
+            grid-template-columns: 150px 150px;
+            column-gap: 10px;
+            &:after {
+                bottom: -10px;   
+            }
+            &_title {
+                font-size: 19px;
+            }
+        }
+        &__social_block {
+            width: 142px;
+        }
+        &_social_descr {
+            margin-left: 4px;
+        }
     }
 }

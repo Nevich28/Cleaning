@@ -11,7 +11,6 @@
 .container {
     margin: 0 auto;
     width: 1110px;
-    //max-width: 100vw;
 }
 .devider {
   height: 3px;
@@ -29,4 +28,6 @@
 @import 'blocks/choose';
 @import 'blocks/project';
 @import 'blocks/delivering';
+@import 'blocks/blog';
+@import 'blocks/quote';
 @import 'blocks/media';
