@@ -65,9 +65,16 @@
     }
     &__link {
         padding: 60px 73px 60px 65px;
+        transition: 0.2s all;
         &:hover {
             text-decoration: none;
-        }
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }    
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
     }
     &__tel_box {
         display: grid;

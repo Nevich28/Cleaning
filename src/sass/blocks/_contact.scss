@@ -1,0 +1,48 @@
+.contact {
+    margin-top: 120px;
+    background-color: $mainBlue;
+    height: 120px;
+    border-bottom: 1px solid #b0a7d6;
+    &__container {
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:after {
+            content: '';
+            height: 120px;
+            width: 1px;
+            background-color: #b0a7d6;
+            position: absolute;
+            right: -115px;          
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__icon {
+        height: 15px;
+        fill: $mainYellow;
+    }
+    &__descr {
+        margin-left: 10px;
+        display: inline;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: left;
+        color: #fff;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

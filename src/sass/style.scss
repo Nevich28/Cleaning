@@ -1,11 +1,12 @@
 @import 'variables/variables';
-//@import 'base/mixins';
+
   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Nunito:wght@800&family=Raleway:wght@400;600;700&display=swap');
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-display: swap;
 }
 
 .container {
@@ -17,6 +18,7 @@
   width: 30px;
   background-color: $mainYellow;
 }
+
 
 @import 'blocks/header';
 @import 'blocks/menu';
@@ -30,4 +32,8 @@
 @import 'blocks/delivering';
 @import 'blocks/blog';
 @import 'blocks/quote';
+@import 'blocks/modal';
+@import 'blocks/up';
+@import 'blocks/contact';
+@import 'blocks/footer';
 @import 'blocks/media';
