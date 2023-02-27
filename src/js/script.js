@@ -57,6 +57,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		infinite: true,
 		slidesToShow: 3,
 		autoplay: false,
+		arrows: true,
+		prevArrow: $('.services__prev'),
+		nextArrow: $('.services__next'),
 		responsive: [
 			{
 				breakpoint: 1300,

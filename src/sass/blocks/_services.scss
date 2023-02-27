@@ -61,19 +61,31 @@
         background-color: $mainBlue;
         color: #fff;
     }
-     .slick-prev {
-        &::before {
-            color: $mainBlue;
-            font-size: 45px;
-            margin-left: -60px;
+    &__arrow {
+        position: absolute;
+        bottom: 248px;
+        width: 55px;
+        height: 55px;
+        background-color: $mainBlue;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }    
+        svg {
+            fill: white;
+            height: 30px;
         }
     }
-    .slick-next {
-        &::before {
-            color: $mainBlue;
-            font-size: 45px;
-            margin-left: 20px;
-        }
+    &__prev {
+        left: -72px;
+    }
+    &__next {
+        right: -72px;
     }
 }
 
